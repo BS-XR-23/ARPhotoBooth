@@ -188,10 +188,12 @@ public class AttireManager : MonoBehaviour
                 }
             }
         }
-        
         cursors[0].position =Vector2.Lerp(cursors[0].position,avatarMocap.bones[(int)Body.LEFT_INDEX].transform.position,Time.deltaTime*10);
         cursors[1].position = Vector2.Lerp(cursors[1].position, avatarMocap.bones[(int)Body.RIGHT_INDEX].transform.position, Time.deltaTime * 10);
 
+        var neckPosition = (avatarMocap.bones[(int)Body.LEFT_SHOULDER].transform.position +
+                            avatarMocap.bones[(int)Body.RIGHT_SHOULDER].transform.position) / 2f;
+        cursors[2].position = neckPosition;
     }
     private void LateUpdate()
     {
