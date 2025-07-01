@@ -1,0 +1,171 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7058595472643250744
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 4338a2f2678d8134fbb8dd7bddb33b54,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4338a2f2678d8134fbb8dd7bddb33b54,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4338a2f2678d8134fbb8dd7bddb33b54,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4338a2f2678d8134fbb8dd7bddb33b54,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4338a2f2678d8134fbb8dd7bddb33b54,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4338a2f2678d8134fbb8dd7bddb33b54,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4338a2f2678d8134fbb8dd7bddb33b54,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4338a2f2678d8134fbb8dd7bddb33b54,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4338a2f2678d8134fbb8dd7bddb33b54,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4338a2f2678d8134fbb8dd7bddb33b54,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4338a2f2678d8134fbb8dd7bddb33b54,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4338a2f2678d8134fbb8dd7bddb33b54,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4338a2f2678d8134fbb8dd7bddb33b54,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4338a2f2678d8134fbb8dd7bddb33b54,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1768263010829004837, guid: 4338a2f2678d8134fbb8dd7bddb33b54,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ae3cc32cae92b4911aa71eae4617440b, type: 2}
+    - target: {fileID: -1187568110127920279, guid: 4338a2f2678d8134fbb8dd7bddb33b54,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00044
+      objectReference: {fileID: 0}
+    - target: {fileID: -1187568110127920279, guid: 4338a2f2678d8134fbb8dd7bddb33b54,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.01548
+      objectReference: {fileID: 0}
+    - target: {fileID: -1160098118477567115, guid: 4338a2f2678d8134fbb8dd7bddb33b54,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1160098118477567115, guid: 4338a2f2678d8134fbb8dd7bddb33b54,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: -1160098118477567115, guid: 4338a2f2678d8134fbb8dd7bddb33b54,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4338a2f2678d8134fbb8dd7bddb33b54,
+        type: 3}
+      propertyPath: m_Name
+      value: BeltJewellery1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4338a2f2678d8134fbb8dd7bddb33b54,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4338a2f2678d8134fbb8dd7bddb33b54,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2766994730005767805}
+  m_SourcePrefab: {fileID: 100100000, guid: 4338a2f2678d8134fbb8dd7bddb33b54, type: 3}
+--- !u!4 &7385782796115623379 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4338a2f2678d8134fbb8dd7bddb33b54,
+    type: 3}
+  m_PrefabInstance: {fileID: 7058595472643250744}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7868988111170692969 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4338a2f2678d8134fbb8dd7bddb33b54,
+    type: 3}
+  m_PrefabInstance: {fileID: 7058595472643250744}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2766994730005767805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7868988111170692969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1296fdd29b0f7944aa89cf12b18c85a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smoothness: 13
+  isLerp: 1
+  attire: {fileID: 0}
+  scaleFactor: 4.2
+  positionOffset: {x: 0, y: -0.4, z: 0}
+  skeleton: {fileID: 0}
+  virtualHip: {fileID: 0}
+  virtualNeck: {fileID: 0}
+  bones: []
+  previousScale: {x: 1, y: 1, z: 1}
+  hip: {fileID: 0}
+  log: {fileID: 0}
+  positionPivot: {fileID: 7385782796115623379}
+  scalePivot: {fileID: 7385782796115623379}
+  rotationPivot: {fileID: 7385782796115623379}
+  leftRotationOffset: 35
+  rightRotationOffset: 30
+  yAngle: 0

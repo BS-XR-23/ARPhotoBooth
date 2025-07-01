@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3626166596344199115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7422104676256496539}
+  - component: {fileID: 3253843446235973343}
+  m_Layer: 0
+  m_Name: NecklaceJewelleryUICreator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7422104676256496539
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3626166596344199115}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 45.97175, y: 252.58215, z: -45.134125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3253843446235973343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3626166596344199115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cde9c440573b054ba708d284542a838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attireUIItem: {fileID: 1545287088612357386, guid: ae3e12cbdecc448eb99df03e8f0bad5f,
+    type: 3}
+  root: {fileID: 0}
+  attires:
+  - attireName: Necklace1
+    attireModel: {fileID: 0}
+    checkbox: {fileID: 0}
+    dependentAttire: []
+    show: 1
+    thumbnail: {fileID: 21300000, guid: 4857dbb81397644bcb449a948d4ec855, type: 3}
+  - attireName: Necklace2
+    attireModel: {fileID: 0}
+    checkbox: {fileID: 0}
+    dependentAttire: []
+    show: 1
+    thumbnail: {fileID: 21300000, guid: 8c1710b584d63404d9a3995d0054934b, type: 3}
+  - attireName: Necklace3
+    attireModel: {fileID: 0}
+    checkbox: {fileID: 0}
+    dependentAttire: []
+    show: 1
+    thumbnail: {fileID: 21300000, guid: 46f8db828012d4f119a92c1b3ecba285, type: 3}
+  - attireName: Necklace4
+    attireModel: {fileID: 0}
+    checkbox: {fileID: 0}
+    dependentAttire: []
+    show: 1
+    thumbnail: {fileID: 21300000, guid: 0745ce97070244aaab03c6365ae81ee9, type: 3}
+  - attireName: Necklace5
+    attireModel: {fileID: 0}
+    checkbox: {fileID: 0}
+    dependentAttire: []
+    show: 1
+    thumbnail: {fileID: 21300000, guid: 05ee10198703a42a79d72ec46b9ae572, type: 3}
+  - attireName: Necklace6
+    attireModel: {fileID: 0}
+    checkbox: {fileID: 0}
+    dependentAttire: []
+    show: 1
+    thumbnail: {fileID: 21300000, guid: 4a0bdd568c71442899fd1c2d6355830e, type: 3}
+  - attireName: Necklace7
+    attireModel: {fileID: 0}
+    checkbox: {fileID: 0}
+    dependentAttire: []
+    show: 1
+    thumbnail: {fileID: 21300000, guid: 37772b68ac9b9194cab5e4cdb2e974cb, type: 3}
+  - attireName: Necklace8
+    attireModel: {fileID: 0}
+    checkbox: {fileID: 0}
+    dependentAttire: []
+    show: 1
+    thumbnail: {fileID: 21300000, guid: 5ea935d8b11b21946b9eeeeb52472bf8, type: 3}
+  - attireName: Necklace9
+    attireModel: {fileID: 0}
+    checkbox: {fileID: 0}
+    dependentAttire: []
+    show: 1
+    thumbnail: {fileID: 21300000, guid: f3108b167e7578c41809f157e43a0bed, type: 3}
