@@ -21,7 +21,7 @@ public class JewelleryUI : MonoBehaviour
             dressUIItem.Init(attires[i], attires[i].thumbnail);
             AttireManager.Instance.attires.Add(attires[i]);
             AttireManager.Instance.dressUIItems.Add(dressUIItem);
-            SetupHover(dressUIItem);
+            //SetupHover(dressUIItem);
         }
     }
     public void SetupHover(DressUIItem dressUIItem)

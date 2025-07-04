@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class AttireManager : MonoBehaviour
 {
     public static AttireManager Instance;
+    public bool isInitialTrackDone = false;
     public GameObject tPoseInstruction;
     public List<AttireModel> attires;
     public List<AttireModel> beltJewelleryattires;
@@ -19,24 +20,17 @@ public class AttireManager : MonoBehaviour
     private Vector2 lastMousePos;
     private float settingsButtonShowingTime = 3;
     public AvatarMocap avatarMocap;
-    [HideInInspector]
-    public float cameraDistance;
-    [HideInInspector]
-    public Vector3 scaleOffset;
-    [HideInInspector]
-    public Vector3 positionOffset;
-    [HideInInspector]
-    public bool wearAttire = false;
+    [HideInInspector] public float cameraDistance;
+    [HideInInspector] public Vector3 scaleOffset;
+    [HideInInspector] public Vector3 positionOffset;
+    [HideInInspector] public bool wearAttire = false;
     public int defaultSelect = 1;
-    public List<DressUIItem> dressUIItems=new List<DressUIItem>();
-    [SerializeField]
-    public List<RectTransform> cursors;
-    [SerializeField]
-    private DressUIItem dressItemPrefab;
+    public List<DressUIItem> dressUIItems = new List<DressUIItem>();
+    [SerializeField] public List<RectTransform> cursors;
+    [SerializeField] private DressUIItem dressItemPrefab;
     [SerializeField] private List<Transform> dressRoots = new();
     [SerializeField] private Transform beltJewelleryRoot;
-    [SerializeField]
-    private RectTransform activeInSide;
+    [SerializeField] private RectTransform activeInSide;
     public GameObject screenshotBtn;
     public GameObject screenshotUI;
     private AttireModel previousAttireModel;
@@ -45,6 +39,7 @@ public class AttireManager : MonoBehaviour
     public Transform area;
     public Transform UI;
     public TextMeshProUGUI selectYourNecklaceText;
+
     private void Awake()
     {
         Instance = this;
@@ -55,7 +50,12 @@ public class AttireManager : MonoBehaviour
         StartCoroutine(ShowDefaultJewellery());
     }
 
-    private void ControlDressSelectionUIVisibility(bool isVisible)
+    public void StopHumanTracking()
+    {
+        isInitialTrackDone = true;
+    }
+
+private void ControlDressSelectionUIVisibility(bool isVisible)
     {
         foreach (var dressRoot in dressRoots)
         {
@@ -100,8 +100,8 @@ public class AttireManager : MonoBehaviour
             }
         });
         //InitAttireUI();
-        cursors[0].gameObject.SetActive(false);
-        cursors[1].gameObject.SetActive(false);
+        // cursors[0].gameObject.SetActive(false);
+        // cursors[1].gameObject.SetActive(false);
         ControlDressSelectionUIVisibility(false);
         selectYourNecklaceText.gameObject.SetActive(false);
         screenshotBtn.gameObject.SetActive(false);
@@ -111,8 +111,8 @@ public class AttireManager : MonoBehaviour
     {
         previewMode = false;
         wearAttire = true;
-        cursors[0].gameObject.SetActive(true);
-        cursors[1].gameObject.SetActive(true);
+        // cursors[0].gameObject.SetActive(true);
+        // cursors[1].gameObject.SetActive(true);
         ApplicationManager.Instance.IsHoverActive = true;
         tPoseInstruction.gameObject.SetActive(false);
         ControlDressSelectionUIVisibility(true);
@@ -135,8 +135,8 @@ public class AttireManager : MonoBehaviour
     {
         wearAttire = false;
         ApplicationManager.Instance.IsHoverActive = false;
-        cursors[0].gameObject.SetActive(false);
-        cursors[1].gameObject.SetActive(false);
+        // cursors[0].gameObject.SetActive(false);
+        // cursors[1].gameObject.SetActive(false);
     }
     
     public void ShowAttire(AttireModel attireModel)
@@ -155,13 +155,13 @@ public class AttireManager : MonoBehaviour
     }
     private void HideAttire(AttireModel attireModel)
     {
-        attireModel.show = false;
-        attireModel.attireModel.gameObject.SetActive(false);
-        foreach (AttireModel dependentAttire in attireModel.dependentAttire)
-        {
-            dependentAttire.show = false;
-            dependentAttire.attireModel.gameObject.SetActive(false);
-        }
+        // attireModel.show = false;
+        // attireModel.attireModel.gameObject.SetActive(false);
+        // foreach (AttireModel dependentAttire in attireModel.dependentAttire)
+        // {
+        //     dependentAttire.show = false;
+        //     dependentAttire.attireModel.gameObject.SetActive(false);
+        // }
     }
     private void MapBones()
     {
@@ -188,16 +188,23 @@ public class AttireManager : MonoBehaviour
                 }
             }
         }
-        cursors[0].position =Vector2.Lerp(cursors[0].position,avatarMocap.bones[(int)Body.LEFT_INDEX].transform.position,Time.deltaTime*10);
-        cursors[1].position = Vector2.Lerp(cursors[1].position, avatarMocap.bones[(int)Body.RIGHT_INDEX].transform.position, Time.deltaTime * 10);
 
-        var neckPosition = (avatarMocap.bones[(int)Body.LEFT_SHOULDER].transform.position +
-                            avatarMocap.bones[(int)Body.RIGHT_SHOULDER].transform.position) / 2f;
-        cursors[2].position = neckPosition;
+        if (isInitialTrackDone)
+        {
+            cursors[0].position =Vector2.Lerp(cursors[0].position,avatarMocap.bones[(int)Body.LEFT_INDEX].transform.position,Time.deltaTime*10);
+            cursors[1].position = Vector2.Lerp(cursors[1].position, avatarMocap.bones[(int)Body.RIGHT_INDEX].transform.position, Time.deltaTime * 10);    
+        }
+        else
+        {
+            var neckPosition = (avatarMocap.bones[(int)Body.LEFT_SHOULDER].transform.position +
+                                avatarMocap.bones[(int)Body.RIGHT_SHOULDER].transform.position) / 2f;
+            cursors[2].position = neckPosition;
+        }
     }
     private void LateUpdate()
     {
-        if (wearAttire) TrackAttire();
+        //if (wearAttire) 
+            TrackAttire();
     }
     public void Hide()
     {
