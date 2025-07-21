@@ -19,7 +19,6 @@ public class CountDownTimer : MonoBehaviour
     public bool timerIsRunning;
     private CanvasGroup _canvasGroup;
 
-    [SerializeField] private Transform startingLocalPosition;
     [SerializeField]
     private bool reverse;
     private void Awake()
@@ -82,7 +81,6 @@ public class CountDownTimer : MonoBehaviour
     public void StopTimer()
     {
         Debug.Log($"Reset Timer:{name}");
-        transform.localPosition = startingLocalPosition.position;
         _timerText.text = $"{(int)totalTime}";
         outline.fillAmount = 0;
         timerIsRunning = false;
