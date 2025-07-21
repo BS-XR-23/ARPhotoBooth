@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -34,7 +32,6 @@ public class HoverDetector : MonoBehaviour
         {
           if (!hover[i]&&(dressItem ? RectTransformUtility.RectangleContainsScreenPoint(hoverTaget, cursors[i].position) : RectTransformUtility.RectangleContainsScreenPoint(cursors[i], hoverTaget.position)))
           {
-            
             if (!ApplicationManager.Instance.globalCountDownTimer.timerIsRunning && hover[i])
             {
               ResetListener(i);
