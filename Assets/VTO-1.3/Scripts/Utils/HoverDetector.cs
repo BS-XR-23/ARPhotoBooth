@@ -13,6 +13,7 @@ public class HoverDetector : MonoBehaviour
   public List<RectTransform> cursors = new List<RectTransform>();
   public bool dressItem;
   public bool showTimer;
+  public bool timerVisibilityOverride = true;
   public RectTransform activeInSide;
   void Start()
   {
@@ -24,13 +25,13 @@ public class HoverDetector : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    if(ApplicationManager.Instance.IsHoverActive&&hoverTaget.gameObject.activeSelf)
+    if(ApplicationManager.Instance.IsHoverActive && hoverTaget.gameObject.activeSelf)
     {
       for(int i=0;i< cursors.Count;i++)
       {
-        if ((activeInSide != null ? RectTransformUtility.RectangleContainsScreenPoint(activeInSide, cursors[i].position) : true) )
+        if (activeInSide == null || RectTransformUtility.RectangleContainsScreenPoint(activeInSide, cursors[i].position))
         {
-          if (!hover[i]&&(dressItem ? RectTransformUtility.RectangleContainsScreenPoint(hoverTaget, cursors[i].position) : RectTransformUtility.RectangleContainsScreenPoint(cursors[i], hoverTaget.position)))
+          if (!hover[i] && (dressItem ? RectTransformUtility.RectangleContainsScreenPoint(hoverTaget, cursors[i].position) : RectTransformUtility.RectangleContainsScreenPoint(cursors[i], hoverTaget.position)))
           {
             if (!ApplicationManager.Instance.globalCountDownTimer.timerIsRunning && hover[i])
             {
@@ -66,7 +67,7 @@ public class HoverDetector : MonoBehaviour
     public void ResetListener(int HoverIndex)
     {
         OnHoverEnter?.Invoke();
-        ApplicationManager.Instance.globalCountDownTimer.StartTimer();
+        ApplicationManager.Instance.globalCountDownTimer.StartTimer(timerVisibilityOverride);
         ApplicationManager.Instance.latestHoverDetector = this;
         if (showTimer)
         {

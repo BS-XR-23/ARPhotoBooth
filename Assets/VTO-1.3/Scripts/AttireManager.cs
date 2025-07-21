@@ -47,6 +47,7 @@ public class AttireManager : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("AttireManager Start");
         StartCoroutine(ShowDefaultJewellery());
     }
 

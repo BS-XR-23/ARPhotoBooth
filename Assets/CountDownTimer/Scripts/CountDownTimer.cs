@@ -18,6 +18,8 @@ public class CountDownTimer : MonoBehaviour
     public UnityEvent OnFinished;
     public bool timerIsRunning;
     private CanvasGroup _canvasGroup;
+
+    [SerializeField] private Transform startingLocalPosition;
     [SerializeField]
     private bool reverse;
     private void Awake()
@@ -34,8 +36,7 @@ public class CountDownTimer : MonoBehaviour
     }
 
     private void Start()
-    {
-      
+    { 
       _canvasGroup = GetComponent<CanvasGroup>();
       if (_canvasGroup) _canvasGroup.alpha = 0;
     }
@@ -48,20 +49,18 @@ public class CountDownTimer : MonoBehaviour
             outline.fillAmount = reverse?1- (timeCount / totalTime) : timeCount / totalTime;
             int time= reverse ? (int)totalTime - (int)timeCount : (int)timeCount;
           _timerText.text = time.ToString("D2");
-
-      }
+        }
         else
         {
             OnFinished?.Invoke();
             timerIsRunning = false;
             if (_canvasGroup) _canvasGroup.alpha = 0;
-           
         }
     }
     [ContextMenu("Start Timer")]
-    public void StartTimer()
+    public void StartTimer(bool isVisible = true)
     {
-        gameObject.SetActive(true);
+        gameObject.SetActive(isVisible);
         if (_canvasGroup) _canvasGroup.alpha = 1; 
         Debug.Log("Start timer");
         outline.fillAmount = 0;
@@ -80,10 +79,10 @@ public class CountDownTimer : MonoBehaviour
         timerIsRunning = true;
     }
     
-
     public void StopTimer()
     {
         Debug.Log($"Reset Timer:{name}");
+        transform.localPosition = startingLocalPosition.position;
         _timerText.text = $"{(int)totalTime}";
         outline.fillAmount = 0;
         timerIsRunning = false;

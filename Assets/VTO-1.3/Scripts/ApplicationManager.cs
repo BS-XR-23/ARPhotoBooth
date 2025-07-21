@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using DG.Tweening.Core.Easing;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class ApplicationManager : MonoBehaviour
@@ -10,7 +6,7 @@ public class ApplicationManager : MonoBehaviour
     public static ApplicationManager Instance;
     public bool IsHoverActive;
     
-    [HideInInspector]
+    //[HideInInspector]
     public HoverDetector latestHoverDetector;
     public CountDownTimer globalCountDownTimer;
     [SerializeField]
