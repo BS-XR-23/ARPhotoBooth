@@ -118,7 +118,7 @@ private void ControlDressSelectionUIVisibility(bool isVisible)
         tPoseInstruction.gameObject.SetActive(false);
         ControlDressSelectionUIVisibility(true);
         screenshotBtn.gameObject.SetActive(true);
-        selectYourNecklaceText.gameObject.SetActive(true);
+        //selectYourNecklaceText.gameObject.SetActive(true);
         ShowAttire(previousAttireModel);
     }
     public void StartPreview()
